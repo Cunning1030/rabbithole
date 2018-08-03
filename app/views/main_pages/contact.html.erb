@@ -1,0 +1,30 @@
+<h1>MainPages#contact</h1>
+<p>Find me in app/views/main_pages/contact.html.erb</p>
+
+  <div class=”table” id="contact">
+    <div class="col-md-4 col-xs-12">
+      <%= image_tag("", class: "img-responsive") %>
+    </div>
+    <div class="col-md-8 col-xs-12">
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control contact-info" id="name" name="" title="Name optional" placeholder="Your name here...">
+          <p id="visible-name"></p>
+        </div><br><br>
+        <div class="form-group">
+          <input type="tel" class="form-control contact-info" id="phone" name="" title="Phone number optional" placeholder="(+country code) 1234567890" minlength="10">
+          <p id="visible-phone"></p>
+        </div><br><br>
+        <div class="form-group">
+          <input type="email" class="form-control contact-info" id="email" name="" title="Email required" placeholder="Your email here..." required="required">
+          <p id="visible-email"></p>
+        </div><br><br>
+        <div class="form-group">
+          <label for="message-box" id="messagelabel"><p id="char-count"></p></label>
+          <textarea class="form-control" id="message-box" name="" title="Message required" style="resize:none" placeholder="Your message here..." required="required"></textarea>
+          <p id="visible-comment"></p>
+        </div><br><br>
+        <button type="submit" class="btn btn-outline-primary btn-lg" id="send" name="">Submit</button>
+      </form>
+    </div>
+  </div>

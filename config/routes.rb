@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :posts
+  get 'main_pages/about'
+
+  get 'main_pages/contact'
+
   get 'main_pages/index'
 
   root 'main_pages#index'

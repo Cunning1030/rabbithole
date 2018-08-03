@@ -2,11 +2,99 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.logo {
-  float: left;
-  padding: 0px 20px 0px 20px;
+body {
+
 }
 
-li {
+a {
+  transition: color 2000ms;
+  -webkit-transition: color 2000ms;
+  border-radius: 5px;
+}
+
+nav {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.logo {
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px 10px 10px 15px;
+  float: left;
+  border: 2px solid black;
+}
+
+nav h1{
+  color: green;
+}
+
+ul {
   list-style: none;
+}
+
+nav  a {
+  color: white;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+nav a:hover {
+  color: green;
+  text-decoration: none;
+}
+nav a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:visited:hover {
+  color: green;
+  text-decoration: none;
+}
+
+.main-body {
+  margin-top: 200px;
+}
+
+footer {
+  margin-top: 100px;
+}
+
+// Contact Page Styles
+
+.form-control {
+  border: 2px solid grey;
+  float: left;
+}
+
+.contact-info {
+  width: 40%;
+}
+
+label {
+  float: left;
+  clear: both;
+  margin-top: 15px;
+}
+
+#message-box {
+  width: 81%;
+  clear: left;
+}
+
+#visible-comment {
+  padding-top: 65px;
+}
+
+#send {
+  position: sticky;
+  float: left;
+  margin-top: 20px;
 }
