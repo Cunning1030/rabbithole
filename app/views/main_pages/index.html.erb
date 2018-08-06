@@ -1,21 +1,50 @@
-<ul class="post-list">
+<h1>Home</h1>
 
-  <li class="post-item">
-    <label></label>
+<div class="post-list container">
+
+  <div class="post-item">
+    <label>
+      <h4>
+        Featured Post
+      </h4>
+    </label>
     <article>
-      <h2>
-        <a></a>
-      </h2>
+      <%= link_to @featured_post do %>
+        <h2>
+          <%= @featured_post.title %>
+        </h2>
+        <%= image_tag @featured_post.image_url, class: "img-responsive show-img" %>
+      <% end %>
       <div class="post-excerpt">
         <p>
-          “for there is no folly of the beast of the earth which is not
-          infinitely outdone by the madness of men ” ― Herman Melville, Moby Dick
+          "<%= @featured_post.excerpt %>"
         </p>
       </div>
     </article>
-  </li>
+  </div>
 
-  <li class="post-item">
+  <div class="post-item">
+    <label>
+      <h4>
+        Most Recent
+      </h4>
+    </label>
+    <article>
+      <%= link_to @most_recent_post do %>
+        <h2>
+          <%= @most_recent_post.title %>
+        </h2>
+        <%= image_tag @most_recent_post.image_url, class: "img-responsive show-img" %>
+      <% end %>
+      <div class="post-excerpt">
+        <p>
+          "<%= @most_recent_post.excerpt %>"
+        </p>
+      </div>
+    </article>
+  </div>
+
+  <div class="post-item">
     <label></label>
     <article>
       <h2>
@@ -33,9 +62,9 @@
         </p>
       </div>
     </article>
-  </li>
+  </div>
 
-  <li class="post-item">
+  <div class="post-item">
     <label></label>
     <article>
       <h2>
@@ -59,6 +88,6 @@
         </p>
       </div>
     </article>
-  </li>
+  </div>
 
-</ul>
+</div>

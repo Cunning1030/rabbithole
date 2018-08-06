@@ -9,7 +9,6 @@ body {
 a {
   transition: color 2000ms;
   -webkit-transition: color 2000ms;
-  border-radius: 5px;
 }
 
 nav {
@@ -63,19 +62,52 @@ nav a:visited:hover {
   margin-top: 200px;
 }
 
+.main-body a:hover {
+  background-color: white;
+  text-decoration: none;
+  color: green;
+}
+
+.post-item {
+  border: 2px solid grey;
+  border-radius: 5px;
+  margin: 30px;
+  padding: 20px;
+  display: inline-block;
+  clear: none;
+}
+
+.post-item h2 {
+  color: grey;
+  transition: color 2000ms;
+  -webkit-transition: color 2000ms;
+}
+
+.post-item h2:hover {
+  color: green;
+}
+
+article {
+  padding: 15px;
+  clear: left;
+}
+
+.post-excerpt {
+  clear: left;
+}
+
 footer {
   margin-top: 100px;
+  text-align: right;
+  clear: both;
 }
 
 // Contact Page Styles
 
 .form-control {
+  margin: 10px;
   border: 2px solid grey;
   float: left;
-}
-
-.contact-info {
-  width: 40%;
 }
 
 label {
@@ -85,7 +117,6 @@ label {
 }
 
 #message-box {
-  width: 81%;
   clear: left;
 }
 
@@ -97,4 +128,9 @@ label {
   position: sticky;
   float: left;
   margin-top: 20px;
+}
+
+.contact-img {
+  float: right;
+  padding: 20px;
 }

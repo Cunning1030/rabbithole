@@ -1,3 +1,31 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-form {
+  padding: 20px;
+  margin: 20px;
+}
+
+.form-submit {
+  padding-top: 20px;
+  margin-top: 30px;
+  clear: left;
+}
+
+.post-index-preview {
+  margin: 30px;
+  padding: 20px;
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+
+article {
+  margin: 15px;
+}
+
+.show-img {
+  max-width: 300px;
+  float: left;
+  margin: 5px 30px 20px 0px;
+}

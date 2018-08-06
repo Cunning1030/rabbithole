@@ -2,7 +2,6 @@
   <% if post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
       <ul>
       <% post.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,27 +10,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :post_title %>
+  <div class="row post-form">
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= form.label :title %>
+        <%= form.text_field :title, id: :post_title, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :content %>
+        <%= form.text_area :content, id: :post_content, class: "form-control", size: "5x5" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :excerpt %>
+        <%= form.text_area :excerpt, id: :post_excerpt, class: "form-control", size: "5x5" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :image_url %>
+        <%= form.text_field :image_url, id: :post_image_url, class: "form-control" %>
+      </div>
+
+      <div class="form-group form-submit">
+        <%= form.submit "Submit Post", class: "btn btn-outline-primary btn-lg form-label" %>
+      </div>
+
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content, id: :post_content %>
-  </div>
-
-  <div class="field">
-    <%= form.label :excerpt %>
-    <%= form.text_area :excerpt, id: :post_excerpt %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image_url %>
-    <%= form.text_field :image_url, id: :post_image_url %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
