@@ -13,19 +13,37 @@
 
   <body>
 
-    <nav class="projectName navbar-brand" id="brand">
+    <nav>
+
       <%= image_tag("rabbitlogo.png", class: "img-responsive logo") %>
-      <h1>Rabbithole</h1>
+
       <ul id="navbuttons">
         <li><a><%= link_to "Home", root_path %></a></li>
         <li><a><%= link_to 'Posts', posts_path %></a></li>
+        <li><a><%= link_to 'Users', users_path %></a></li>
         <li><a><%= link_to 'About', main_pages_about_path %></a></li>
+        <li>
+          <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+          <% else %>
+            <%= link_to('Login', new_user_session_path) %>
+          <% end %>
+        </li>
         <li><a><%= link_to 'Contact', main_pages_contact_path %></a></li>
         <li><a><%= link_to 'Compos(e/t)', new_post_path %></a></li>
       </ul>
+
     </nav>
 
     <div class="container-fluid main-body">
+
+      <% if notice %>
+        <h1 id="notice" class="alert alert-info"><%= notice %></h1>
+      <% end %>
+
+      <% if alert %>
+        <h1 id="alert" class="alert alert-info"><%= alert %></h1>
+      <% end %>
 
       <%= yield %>
 

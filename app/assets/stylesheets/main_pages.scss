@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-
-}
-
 a {
   transition: color 2000ms;
   -webkit-transition: color 2000ms;
@@ -29,8 +25,8 @@ nav {
   border: 2px solid black;
 }
 
-nav h1{
-  color: green;
+#navbuttons {
+  margin-top: 20px;
 }
 
 ul {
